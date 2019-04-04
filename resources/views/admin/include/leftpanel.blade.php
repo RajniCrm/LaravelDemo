@@ -32,7 +32,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?php if($segment2 == 'cms' && $segment1 == 'admin') echo 'active'; ?>" href="{{ url('/categories') }}">
+                <a class="nav-link <?php if($segment2 == 'cms' && $segment1 == 'admin') echo 'active'; ?>" href="{{ url('/category') }}">
                   <span data-feather="shopping-cart"></span> Categories
                 </a>
               </li>
