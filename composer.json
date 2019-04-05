@@ -26,13 +26,17 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files":[ 
+            "app/Http/Controllers/Helpers.php" 
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
     },
+
     "extra": {
         "laravel": {
             "dont-discover": [

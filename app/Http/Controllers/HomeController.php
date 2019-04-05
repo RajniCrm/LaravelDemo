@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Helpers;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth' ); // , ['except'=>['helpers']]);
     }
 
     /**
@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    // Show the view page using Helpers
+    function helpers()
+    {
+        $test = Helpers::sample_function();
+        return $test;
+    }
+
 }
