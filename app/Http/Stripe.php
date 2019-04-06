@@ -3,7 +3,7 @@
 
 	class Stripe
 	{
-		protected $key, $app_name, $mail_driver;
+		public $key, $app_name, $mail_driver;
 		public function __construct($key, $app_name, $mail_driver)
 		{
 			// print_r($key); exit;

@@ -46,9 +46,10 @@
             @endforeach
           @endif -->
 
-          <!-- THIRD -->
-          @if(count($parentData) > 0)
-            @foreach($parentData as $cms)
+          <!-- THIRD  Use parentData loop simple method for multiple records in navbar-->
+          <!-- FOURTH  Use parentDataRow loop service provider method for multiple records in navbar-->
+          @if(count($parentDataRow) > 0)
+            @foreach($parentDataRow as $cms)
             <li class="nav-item dropdown <?php if($segment2 == 'services' ) echo 'active'; ?>">
               <a class="nav-link" href="{{ url('/pages/slug/'.$cms->slug) }}">{{$cms->title}}</a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownMenuLink">

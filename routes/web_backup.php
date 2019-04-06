@@ -1,4 +1,4 @@
-<?php
+web_backup<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+/*$stripe = App::make('App\Http\Stripe'); // OR $stripe = resolve('App\Http\Stripe');
+$stripe2 = App::make('App\Http\Stripe'); // OR $stripe = resolve('App\Http\Stripe');
+$stripe3 = App::make('App\Http\Stripe'); // OR $stripe = resolve('App\Http\Stripe');
+*/
+
+/*$stripe = resolve('App\Http\Stripe');
+dd($stripe); */
+// dd($stripe2); dd($stripe3); 
+
+
 
 Route::get('/', function () {
     return view('welcome');

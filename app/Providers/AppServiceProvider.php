@@ -16,7 +16,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        Schema::DefaultStringLength(191);
+       // Schema::DefaultStringLength(191);
+        view()->composer('*', function($view){
+            $stripe = resolve(Stripe::class);
+            return $view->with('stripe', $stripe);
+            
+        });
+        
+        
+
     }
 
     /**
@@ -31,7 +39,8 @@ class AppServiceProvider extends ServiceProvider
         });
         */
         // USE CLASS Stripe REFERENCE
-        $this->app->singleton(Stripe::class, function(){
+      
+        $this->app->bind(Stripe::class, function(){
             return new Stripe(config('services.stripe.key'), config('app.name'), config('mail.driver'));
         });
     }

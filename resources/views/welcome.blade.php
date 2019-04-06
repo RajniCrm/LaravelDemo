@@ -83,6 +83,16 @@
                     Laravel
                 </div>
 
+                <!-- // GET THE DATA USING SERVICE PROVIDERS -->
+                <p>Get following data using service providers (AppServiceProvider.php file) where Stripe class is used</p>
+                <p>
+                    <b>Key:</b>  {{ $stripe->key }}, 
+                    <b>App Name:</b>  {{ $stripe->app_name }}, 
+                    <b>Mail Driver Name:</b>  {{ $stripe->mail_driver }}
+                </p>
+
+
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -90,6 +100,7 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel"></a>
                 </div>
             </div>
         </div>
